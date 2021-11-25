@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-11-25T14:49:46.997Z",
+    "end": "2021-11-25T14:50:34.077Z",
+    "duration": 47080,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c7e0d6a8-9fe2-486e-a9f4-1ea33fb52c92",
+      "title": "",
+      "fullFile": "cypress/integration/smartComerciCompra.spec.js",
+      "file": "cypress/integration/smartComerciCompra.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c876c2d2-725f-4947-bfb0-7778745e1fea",
+          "title": "Teste compra SmartComerci ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Logar e comprar um produto",
+              "fullTitle": "Teste compra SmartComerci  Logar e comprar um produto",
+              "timedOut": null,
+              "duration": 37141,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_homeLoginFrontEnd.default.cadastrarUmUsuarioPessoaFisica();\n_homeLoginFrontEnd.default.comprando();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is detached from the DOM.\n\n`<a href=\"/loja/carrinho.php\" class=\"btn-load-more\">Finaliz...</a>`\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > `cy.get()`\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is detached from the DOM.\n\n`<a href=\"/loja/carrinho.php\" class=\"btn-load-more\">Finaliz...</a>`\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > `cy.get()`\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at $Cy.ensureAttached (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:160538:85)\n    at runAllChecks (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:147817:12)\n    at retryActionability (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:147894:16)\n    at tryCatcher (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:13212:23)\n    at Function.Promise.attempt.Promise.try (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:10486:29)\n    at tryFn (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:165332:61)\n    at whenStable (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:165371:14)\n    at https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:164858:18\n    at tryCatcher (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11329:18)\n    at Promise._fulfill (https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:11273:18)\n    at https://701523.commercesuite.com.br/__cypress/runner/cypress_runner.js:12887:46\nFrom Your Spec Code:\n    at Function.clickOnElement (https://701523.commercesuite.com.br/__cypress/tests?p=cypress\\integration\\smartComerciCompra.spec.js:237:46)\n    at Function.comprando (https://701523.commercesuite.com.br/__cypress/tests?p=cypress\\integration\\smartComerciCompra.spec.js:458:11)\n    at Context.eval (https://701523.commercesuite.com.br/__cypress/tests?p=cypress\\integration\\smartComerciCompra.spec.js:131:32)",
+                "diff": null
+              },
+              "uuid": "35ddd758-47a4-4d6e-bbd0-1542fc97ef4a",
+              "parentUUID": "c876c2d2-725f-4947-bfb0-7778745e1fea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "35ddd758-47a4-4d6e-bbd0-1542fc97ef4a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 37141,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss",
+        "reportTitles": "relatorio",
+        "cdn": true,
+        "charts": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

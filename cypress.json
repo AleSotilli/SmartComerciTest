@@ -1,7 +1,17 @@
 {
-    "env": 
-    {
-    "base_url": "https://701523.commercesuite.com.br/"
+    "base_url": "https://701523.commercesuite.com.br/",
+    "video": false,
+    "screenShot": false,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss",
+        "reportTitles": "relatorio",
+        "cdn": true,
+        "charts": true
     }
-
+    
 }

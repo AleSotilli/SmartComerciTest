@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-25T14:50:43.192Z",
+    "end": "2021-11-25T14:51:26.983Z",
+    "duration": 43791,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "35e88590-36ab-47b5-804b-21ea95707da0",
+      "title": "",
+      "fullFile": "cypress/integration/smartcomercihometest.spec.js",
+      "file": "cypress/integration/smartcomercihometest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "99be5ae5-3cb0-46a5-968d-77cda6d1059c",
+          "title": "Teste da Home Smartcomerci ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verificar o funcionamento da NavBar",
+              "fullTitle": "Teste da Home Smartcomerci  verificar o funcionamento da NavBar",
+              "timedOut": null,
+              "duration": 40439,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_home_front_end.default.validarNavBar();",
+              "err": {},
+              "uuid": "d12d071f-78f3-4776-841d-a5419b24bfc5",
+              "parentUUID": "99be5ae5-3cb0-46a5-968d-77cda6d1059c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d12d071f-78f3-4776-841d-a5419b24bfc5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40439,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss",
+        "reportTitles": "relatorio",
+        "cdn": true,
+        "charts": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
