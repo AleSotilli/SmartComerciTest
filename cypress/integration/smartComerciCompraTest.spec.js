@@ -1,9 +1,7 @@
 /// <reference types="cypress" /> 
 import HomeSmartcomerciCadastro from "../pages/homeLoginFrontEnd.pages"
-import SmartComerciCompra from "../pages/homeComprarFront.pages"
 
-
-describe("Teste compra SmartComerci ", () =>{
+describe("Teste de compra SmartComerci ", () =>{
     beforeEach(() =>{
         cy.visitar()
     })

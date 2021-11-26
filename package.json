@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open --config watchForFileChanges = false",
+    "cy:open": "cypress open --config watchForFileChanges=false",
     "cy:run": "npx cypress run",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",

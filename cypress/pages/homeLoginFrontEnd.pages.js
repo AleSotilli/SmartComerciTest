@@ -4,10 +4,16 @@ import faker from 'faker';
 
 var geradorcpf = require('faker-br');
 let meuCpf = geradorcpf.br.cpf();
+let meucpfempresa = geradorcpf.br();
 const Email = faker.internet.email();
-const numbertelefone = '54 5584-9467'
-const numbercelular = '54 9844-5254'
 const lastName = faker.name.lastName();
+var randomCnpj = require('faker-br');
+let meucnpj = randomCnpj.br.cnpj();
+
+
+const numbertelefone          = '54 5584-9467'
+const numbercelular           = '54 9844-5254'
+const CEP                     = '04843-425'
 
 var escolha1 ='';var escolha2 ='';var escolha3 ='';var aux ='';var aux2; var aux3; var aux4 = ''; var aux5;
 
@@ -15,33 +21,40 @@ const ESCOLHA_1               ='[for="value-0"] > .ch-well > strong'
 const ESCOLHA_2               ='[for="value-1"] > .ch-well > strong'
 const ESCOLHA_3               ='[for="value-2"] > .ch-well > strong'
 
+const BTNSCADASTRO            ='.info-box'
+const BTNCADASTRO             ='.info-box > :nth-child(1) > :nth-child(2) > span > a'
+const CMPNOME                 ='#pf_nome_cliente'
+const DATA                    ='#pf_data_nascimento'
+const CPF                     ='#pf_cpf_cliente'
+const TELEFONECLIENTE         ='#telefone_cliente'
+const CELULARCLIENTE          ='#telefone_cliente_2'
+const INP_EMAIL               = '#email_cliente'
+const INP_EMAIL2              = '#email_cliente2'
+const INP_PASSWORD            = '#senha_cliente'
+const PASSWORD2               = '#senha_cliente2'
+const AvancarBotao            = '.botao-commerce-img'
+const ADM_CHECKBOX            = '.site-logo > img'
+const NAV_BAR                 ='.btn-search'
+const BTNADCPRODUTO           = '#produtos1 > .showcase-box-content > .showcase-slider > .slick-list > .slick-track > .slick-current > .product-box > .product-info-box > .product-buy > .btn-add'
+const ADCMAISPRODUTO          = '#produtos1 > .showcase-box-content > .showcase-slider > .slick-list > .slick-track > .slick-current > .product-box > .product-info-box > .product-buy > .product-buy-qnt > [data-action="plus"] > span'
+const CARRINHO                = ".cart-mini"
+const FINALIZARPEDIDO         = '.btn-load-more'
+const CEPBTN                  = '#cart-shipping'
+const BTNCONTINUA             = '.hidden-xs > .btn-next-step'
+const EMAILEND                = '#login-email'
+const BTNEMAILEND             = '#login-action'
+const BLOCOSEMSENHA           = '.blocoAlerta'
 
-const BTNSCADASTRO                    ='.info-box'
-const BTNCADASTRO                   ='.info-box > :nth-child(1) > :nth-child(2) > span > a'
-const CMPNOME                      ='#pf_nome_cliente'
-const DATA                         ='#pf_data_nascimento'
-const CPF                            ='#pf_cpf_cliente'
-const TELEFONECLIENTE               ='#telefone_cliente'
-const CELULARCLIENTE                ='#telefone_cliente_2'
-const INP_EMAIL                     = '#email_cliente'
-const INP_EMAIL2                     = '#email_cliente2'
-const INP_PASSWORD                  = '#senha_cliente'
-const PASSWORD2                 = '#senha_cliente2'
-const AvancarBotao        = '.botao-commerce-img'
-const ADM_CHECKBOX                  = '.site-logo > img'
-const NAV_BAR                       ='.btn-search'
-const BTNADCPRODUTO =   '#produtos1 > .showcase-box-content > .showcase-slider > .slick-list > .slick-track > .slick-current > .product-box > .product-info-box > .product-buy > .btn-add'
-const ADCMAISPRODUTO =  '#produtos1 > .showcase-box-content > .showcase-slider > .slick-list > .slick-track > .slick-current > .product-box > .product-info-box > .product-buy > .product-buy-qnt > [data-action="plus"] > span'
-const CARRINHO =         ".cart-mini"
-const FINALIZARPEDIDO = '.btn-load-more'
-const CEPBTN  = '#cart-shipping'
-const CEP = '04843-425'
-const BTNCONTINUA = '.hidden-xs > .btn-next-step'
-const EMAILEND = '#login-email'
-const BTNEMAILEND = '#login-action'
-const ELEMENTOFINAL = '.ch-first-column > .step > .step-heading'
 
-export default class HomeSmartcomerciCadastro extends Base {
+/////Cadastro pessoa juridica
+const BTNCDSTRPESSOAJURIDICA = '#PessoaJuridica > a'
+const BTNRAZAOSOCIAL = '#razao_social'
+const BTNINSCRICAO = '#ie'
+const BTNCNPJ = '#cnpj'
+const NOMECLIENTE = '#pj_nome_cliente'
+const BTNCPF = '#pj_cpf_cliente'
+
+export default class HomeSmartComerciCadastro extends Base {
 
   
     static validarElementos(){
@@ -109,7 +122,7 @@ export default class HomeSmartcomerciCadastro extends Base {
                     cy.log(escolha1); cy.log(escolha2);cy.log(escolha3)
                     aux = lastName.slice(lastName.length -4)
                     aux2 = meuCpf.slice(meuCpf.length - 4)
-                    aux3 = numbertelefone.slice(0,3)
+                    aux3 = numbertelefone.slice(0,4)
                     aux4 = numbertelefone.slice(numbertelefone.length -3)
                     aux5 = meuCpf.slice(0,3)
                     cy.log(aux, aux2, aux3, aux4, aux5)
@@ -130,6 +143,55 @@ export default class HomeSmartcomerciCadastro extends Base {
                 });
             });
         }); 
+
+
+
+    }
+
+    static loginInvalidoSemSenha(){
+
+        super.clickOnElement(BTNCADASTRO)
+        super.typeValue(CMPNOME, `${faker.name.firstName()}`)
+        super.typeValue(CMPNOME, ' ')
+        super.typeValue(CMPNOME, lastName)
+        super.typeValue(CPF, meuCpf)
+        super.typeValue(TELEFONECLIENTE, numbertelefone)
+        super.typeValue(CELULARCLIENTE, numbercelular)
+        super.typeValue(INP_EMAIL, Email)
+        super.typeValue(INP_EMAIL2, Email)
+        super.clickOnElement(AvancarBotao)
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            // returning false here prevents Cypress from
+            // failing the test
+            return false
+        })
+        super.verifyIfElementExists(BLOCOSEMSENHA)
+
+    }
+
+    static cadastarUmaPessoaJuridica(){
+
+        super.clickOnElement(BTNCADASTRO)
+        super.clickOnElement(BTNCDSTRPESSOAJURIDICA)
+        super.typeValue(BTNRAZAOSOCIAL, `${faker.company.companyName()}` )
+        super.typeValue(BTNINSCRICAO, `${faker.random.number()}`)
+        super.typeValue(BTNCNPJ, meucnpj)
+        super.typeValue(NOMECLIENTE, `${faker.name.firstName()}` )
+        super.typeValue(NOMECLIENTE, ' ' )
+        super.typeValue(NOMECLIENTE, `${faker.name.lastName()}` )
+        super.typeValue(BTNCPF, meucpfempresa)
+        super.typeValue(INP_EMAIL, Email)
+        super.typeValue(INP_EMAIL2, Email)
+        super.typeValue(TELEFONECLIENTE, numbertelefone)
+        super.typeValue(CELULARCLIENTE, numbercelular)
+        super.typeValue(INP_PASSWORD, 'AleLindo08')
+        super.typeValue(PASSWORD2, 'AleLindo08')
+        super.clickOnElement(AvancarBotao)
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            // returning false here prevents Cypress from
+            // failing the test
+            return false
+        })
 
 
 

@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 3,
-    "tests": 7,
-    "passes": 7,
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2021-11-25T19:46:00.484Z",
+    "start": "2021-11-25T19:49:30.203Z",
     "end": "2021-11-25T19:51:25.157Z",
-    "duration": 260631,
-    "testsRegistered": 7,
+    "duration": 114954,
+    "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -17,141 +17,6 @@
     "hasSkipped": false
   },
   "results": [
-    {
-      "uuid": "0a588acc-6162-4dc3-a7b1-46b2d25ad59e",
-      "title": "",
-      "fullFile": "cypress/integration/smartComerciCompraTest.spec.js",
-      "file": "cypress/integration/smartComerciCompraTest.spec.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "2f11b602-afec-4654-bbb5-efbd5a8c999a",
-          "title": "Teste de compra SmartComerci ",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Logar e comprar um produto",
-              "fullTitle": "Teste de compra SmartComerci  Logar e comprar um produto",
-              "timedOut": null,
-              "duration": 79708,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "_homeLoginFrontEnd.default.cadastrarUmUsuarioPessoaFisica();\n_homeLoginFrontEnd.default.comprando();",
-              "err": {},
-              "uuid": "41f8f679-2863-49b8-a899-2d31378d53d7",
-              "parentUUID": "2f11b602-afec-4654-bbb5-efbd5a8c999a",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "41f8f679-2863-49b8-a899-2d31378d53d7"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 79708,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "6fbf7850-8f27-4d99-842c-d70c126bba74",
-      "title": "",
-      "fullFile": "cypress/integration/smartComerciHomeTest.spec.js",
-      "file": "cypress/integration/smartComerciHomeTest.spec.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "77c42f43-705d-49b4-a232-5f722f70b134",
-          "title": "Teste da Home Smartcomerci ",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Verifica o funcionamento das abas de produtos",
-              "fullTitle": "Teste da Home Smartcomerci  Verifica o funcionamento das abas de produtos",
-              "timedOut": null,
-              "duration": 50636,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "_homeFront.default.validarAbadeProdutos();",
-              "err": {},
-              "uuid": "1e307da1-cc79-4628-9bf9-17b3d08c1ce7",
-              "parentUUID": "77c42f43-705d-49b4-a232-5f722f70b134",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Adiciona produtos ao carrinho e limpa o mesmo",
-              "fullTitle": "Teste da Home Smartcomerci  Adiciona produtos ao carrinho e limpa o mesmo",
-              "timedOut": null,
-              "duration": 28618,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "_homeFront.default.adicionareLimparCarrinho();",
-              "err": {},
-              "uuid": "a88d2b5a-a6d7-4616-b016-088da3edb63e",
-              "parentUUID": "77c42f43-705d-49b4-a232-5f722f70b134",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "1e307da1-cc79-4628-9bf9-17b3d08c1ce7",
-            "a88d2b5a-a6d7-4616-b016-088da3edb63e"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 79254,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
     {
       "uuid": "4d0b4c37-c2f3-4be7-9247-94733dd591c9",
       "title": "",

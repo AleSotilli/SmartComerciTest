@@ -1,11 +1,15 @@
 /// <reference types="cypress" /> 
-import HomeSmartcomerci from "../pages/home_front_end.pages"
+import HomeSmartcomerci from "../pages/homeFront.pages"
 
 describe("Teste da Home Smartcomerci ", () =>{
   beforeEach(() =>{
       cy.visitar()
   })
-    it('verificar o funcionamento da NavBar', () =>{
-      HomeSmartcomerci.validarNavBar()
+    it('Verifica o funcionamento das abas de produtos', () =>{
+      HomeSmartcomerci.validarAbadeProdutos()
+    })
+
+    it('Adiciona produtos ao carrinho e limpa o mesmo', () =>{
+      HomeSmartcomerci.adicionareLimparCarrinho()
     })
 })

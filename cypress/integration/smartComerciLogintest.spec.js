@@ -1,16 +1,26 @@
 /// <reference types="cypress" /> 
-import HomeSmartcomerciCadastro from "../pages/homeLoginFrontEnd.pages"
+import HomeSmartComerciCadastro from "../pages/homeLoginFrontEnd.pages"
 
-describe("Teste da Home Smartcomerci ", () =>{
+describe("Teste de login SmartComerci", () =>{
   beforeEach(() =>{
       cy.visitar()
   })
     it('Verificar os itens de cadastro e cadastrar um usuario', () =>{
-      HomeSmartcomerciCadastro.validarElementos()
+      HomeSmartComerciCadastro.validarElementos()
     })
-    it.only("Cadastrar um usuario", () =>{
-      HomeSmartcomerciCadastro.cadastrarUmUsuarioPessoaFisica()
+    it("Cadastrar um usuario", () =>{
+      HomeSmartComerciCadastro.cadastrarUmUsuarioPessoaFisica()
 
 
+    })
+
+
+    it("Cadastrar um usuario sem senha", () =>{
+      HomeSmartComerciCadastro.loginInvalidoSemSenha()
+
+    })
+
+    it("Cadastrar uma pessoa juridica",() => {
+      HomeSmartComerciCadastro.cadastarUmaPessoaJuridica()
     })
 })
